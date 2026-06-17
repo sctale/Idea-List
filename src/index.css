@@ -1,20 +1,34 @@
 @import "tailwindcss";
 
 @theme {
-  --color-midnight: #0f0e17;
-  --color-deep: #1a1a2e;
-  --color-surface: #16213e;
-  --color-card: rgba(255, 255, 255, 0.05);
-  --color-card-hover: rgba(255, 255, 255, 0.08);
-  --color-amber: #f59e0b;
-  --color-amber-light: #fbbf24;
-  --color-amber-glow: rgba(245, 158, 11, 0.3);
-  --color-text-primary: #fffffe;
-  --color-text-secondary: #a7a9be;
-  --color-text-muted: #5f627a;
-  --color-border: rgba(255, 255, 255, 0.08);
-  --color-danger: #ef4444;
-  --color-danger-bg: rgba(239, 68, 68, 0.1);
+  /* 小清新色系 — 薄荷绿 + 暖白 + 柔和灰 */
+  --color-cream: #faf9f6;
+  --color-cream-warm: #f5f3ee;
+  --color-sage-50: #f0f7f4;
+  --color-sage-100: #dceee5;
+  --color-sage-200: #bddcc9;
+  --color-sage-300: #94c4a8;
+  --color-sage-400: #6aaa85;
+  --color-sage-500: #4a8f6d;
+  --color-sage-600: #3a7358;
+  --color-sand-50: #faf8f3;
+  --color-sand-100: #f0ece2;
+  --color-sand-200: #e2dbc9;
+  --color-sand-300: #cfc5a8;
+  --color-peach: #f5c6a0;
+  --color-peach-light: #fde8d4;
+  --color-lavender: #c8b8db;
+  --color-lavender-light: #ede7f5;
+  --color-sky: #a8d4e6;
+  --color-sky-light: #dff0f7;
+  --color-text-primary: #2d3436;
+  --color-text-secondary: #636e72;
+  --color-text-muted: #b2bec3;
+  --color-text-placeholder: #c8d0d4;
+  --color-border: #e8e4de;
+  --color-border-light: #f0ece6;
+  --color-danger: #e17055;
+  --color-danger-light: #ffeae5;
 }
 
 * {
@@ -30,7 +44,7 @@ html, body, #root {
 }
 
 body {
-  background: var(--color-midnight);
+  background: var(--color-cream);
   color: var(--color-text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -39,26 +53,27 @@ body {
 
 /* 自定义滚动条 */
 ::-webkit-scrollbar {
-  width: 4px;
+  width: 3px;
 }
 ::-webkit-scrollbar-track {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
+  background: var(--color-sand-200);
+  border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--color-sand-300);
 }
 
-/* 输入框占位符样式 */
-textarea::placeholder {
-  color: var(--color-text-muted);
+/* 输入框占位符 */
+textarea::placeholder,
+input::placeholder {
+  color: var(--color-text-placeholder);
 }
 
-/* 选中文字颜色 */
+/* 选中文字 */
 ::selection {
-  background: var(--color-amber);
-  color: var(--color-midnight);
+  background: var(--color-sage-200);
+  color: var(--color-sage-600);
 }
