@@ -31,9 +31,8 @@
   --color-danger-light: #ffeae5;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+/* 全局重置 — 只设置 box-sizing，不覆盖 margin/padding 以免影响 Tailwind 工具类 */
+*, *::before, *::after {
   box-sizing: border-box;
 }
 
@@ -44,6 +43,7 @@ html, body, #root {
 }
 
 body {
+  margin: 0;
   background: var(--color-cream);
   color: var(--color-text-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
